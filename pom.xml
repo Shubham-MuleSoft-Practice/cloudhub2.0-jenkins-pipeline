@@ -17,7 +17,7 @@
 
 		<app.runtime>4.6.6</app.runtime>
 		<mule.maven.plugin.version>4.2.0</mule.maven.plugin.version>
-		<munit.version>4.8.0</munit.version>
+		<munit.version>3.2.1</munit.version>
 	</properties>
 
 	<build>
@@ -89,14 +89,14 @@
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-runner</artifactId>
-			<version>4.8.0</version>
+			<version>3.2.1</version>
 			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.mulesoft.munit</groupId>
 			<artifactId>munit-tools</artifactId>
-			<version>4.8.0</version>
+			<version>3.2.1</version>
 			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
