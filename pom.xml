@@ -99,13 +99,6 @@
 			<classifier>mule-plugin</classifier>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.mulesoft.mule.distributions</groupId>
-			<artifactId>mule-runtime-impl-no-services-bom</artifactId>
-			<version>4.6.6</version>
-			<type>pom</type>
-			<scope>test</scope>
-		</dependency>
 
 		<dependency>
 			<groupId>org.mule.weave</groupId>
