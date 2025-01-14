@@ -12,7 +12,7 @@ pipeline
 			   bat ‘mvn test’
 		   }
 	    }
-		stage('Deploy CloudHub 2.0) {
+		stage('Deploy CloudHub 2.0') {
 			steps {
 			   bat 'mvn clean deploy -DmuleDeploy -Duser=Shubh_123 -Dpass=Shubh@123'
 			}
