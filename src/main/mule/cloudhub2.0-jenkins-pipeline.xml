@@ -13,10 +13,23 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<ee:transform doc:name="Transform Message" doc:id="ec7f5b35-9b3e-4c3c-84f6-1c9f61e65202" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+output application/json
 ---
 {
 	"message": "This is sample ci-cd jenkins pipeline."
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+		<flow-ref doc:name="Flow Reference" doc:id="bb423592-e107-4d80-871e-a7b2b2118916" name="cloudhub2.0-jenkins-pipelineFlow1"/>
+	</flow>
+	<flow name="cloudhub2.0-jenkins-pipelineFlow1" doc:id="aeecacd7-8e17-485d-88cc-3f3d624522ef" >
+		<ee:transform doc:name="Transform Message" doc:id="3c0e1274-e2f4-4ebb-80a6-3f60d86a05bc" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"message": "munit test case1"
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>

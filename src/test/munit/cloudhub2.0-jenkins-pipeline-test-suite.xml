@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="cloudhub2.0-jenkins-pipeline-test-suite.xml" />
+	<munit:test name="cloudhub2.0-jenkins-pipeline-test-suite-cloudhub2.0-jenkins-pipelineFlow1Test" doc:id="a014ccb6-9e52-4538-8213-dc7a4d01fd78" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to cloudhub2.0-jenkins-pipelineFlow1" doc:id="9f5e4192-d48a-4c7a-b44a-86500b793880" name="cloudhub2.0-jenkins-pipelineFlow1"/>
+		</munit:execution>
+		<munit:validation >
+			<logger level="INFO" doc:name="Info log" doc:id="02dc3085-c979-4998-b80d-602f279ba026" message="#[payload]"/>
+			<munit-tools:assert doc:name="Assert payload Not Null" doc:id="05868b76-71c7-487a-91c2-d1b261462597" />
+		</munit:validation>
+	</munit:test>
+
+
+</mule>
