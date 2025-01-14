@@ -7,11 +7,12 @@ pipeline
 			   bat 'mvn clean install'
 		   }
 	    }
-		stage('test') {
-			steps {
-			   echo "*****Munit test cases exceution*****"
-		   }
-	    }
+		  stage('Run MUnit Tests') {
+            steps {
+                echo '***** Running MUnit test cases *****'
+                bat 'mvn test -Dmule.test.format=html -U'
+            }
+        }
 		stage('Deploy CloudHub 2.0') {
 			steps {
 			   bat 'mvn clean deploy -DmuleDeploy -Duser=Shubh_123 -Dpass=Shubh@123'
