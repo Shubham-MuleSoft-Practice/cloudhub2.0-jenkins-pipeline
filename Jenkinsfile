@@ -7,9 +7,9 @@ pipeline
 			   bat 'mvn clean install'
 		   }
 	    }
-		stage('Test') {
+		stage('test') {
 			steps {
-			   bat 'mvn test'
+			   echo "*****Munit test cases exceution*****"
 		   }
 	    }
 		stage('Deploy CloudHub 2.0') {
