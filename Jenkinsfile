@@ -9,7 +9,7 @@ pipeline
 	    }
 		stage('Test') {
 			steps {
-			   bat ‘mvn test’
+			   bat 'mvn test'
 		   }
 	    }
 		stage('Deploy CloudHub 2.0') {
