@@ -1,11 +1,11 @@
 {
   "configs": [
-    "cloudhub2.0-cicd-pipeline.xml"
+    "cloudhub2.0-jenkins-pipeline.xml"
   ],
   "secureProperties": [],
   "supportedJavaVersions": [],
   "redeploymentEnabled": true,
-  "name": "com.mycompany:cloudhub2.0-cicd-pipeline:1.0.0-SNAPSHOT",
+  "name": "com.mycompany:cloudhub2.0-jenkins-pipeline:1.0.0-SNAPSHOT",
   "minMuleVersion": "4.6.0",
   "requiredProduct": "MULE",
   "classLoaderModelLoaderDescriptor": {
@@ -13,7 +13,7 @@
     "attributes": {
       "exportedPackages": [],
       "exportedResources": [
-        "cloudhub2.0-cicd-pipeline.xml",
+        "cloudhub2.0-jenkins-pipeline.xml",
         "log4j2.xml"
       ]
     }

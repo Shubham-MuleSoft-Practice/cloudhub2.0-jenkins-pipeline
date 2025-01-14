@@ -5,19 +5,18 @@
 	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
-	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="092ed6fc-36d6-4a75-85d0-dbabdd40b0b9" >
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="53ceda30-5a67-4cba-8c93-a5182efe24d5" >
 		<http:listener-connection host="0.0.0.0" port="8081" />
 	</http:listener-config>
-	<flow name="cloudhub2.0-cicd-pipelineFlow" doc:id="1c4544c3-23b9-4683-8dc4-edb50c38bcf2" >
-		<http:listener doc:name="Listener" doc:id="5e98bb9e-7589-42c3-a228-50eacafa0a9b" config-ref="HTTP_Listener_config" path="/sample"/>
-		<logger level="INFO" doc:name="Logger" doc:id="1ae42d12-4d05-4159-92f6-f60e50f15b70" message='"Sample flow for ci-cd pipeline with jenkins"'/>
-		<ee:transform doc:name="Transform Message" doc:id="36ab2c9c-9115-45d3-b4cd-ed0bea9fc5be" >
+	<flow name="cloudhub2.0-jenkins-pipelineFlow" doc:id="abab690b-2f03-4b7c-83cc-e20365a9c67a" >
+		<http:listener doc:name="Listener" doc:id="94ec42dc-88ef-4ae4-9fcd-f64043e93e23" config-ref="HTTP_Listener_config" path="/test"/>
+		<ee:transform doc:name="Transform Message" doc:id="ec7f5b35-9b3e-4c3c-84f6-1c9f61e65202" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
-output application/json
+output application/java
 ---
 {
-	"Message" : "Sample flow for ci-cd pipeline with jenkins deploy to cloudhub 2.0"
+	"message": "This is sample ci-cd jenkins pipeline."
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>

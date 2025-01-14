@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>cloudhub2.0-cicd-pipeline</artifactId>
+	<artifactId>cloudhub2.0-jenkins-pipeline</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>mule-application</packaging>
 
-	<name>cloudhub2.0-cicd-pipeline</name>
+	<name>cloudhub2.0-jenkins-pipeline</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
