@@ -66,6 +66,8 @@
 							<format>html</format>
 						</formats>
 					</coverage>
+					<runtimeProduct>MULE</runtimeProduct>
+					<runtimeVersion>4.2.2</runtimeVersion>
 				</configuration>
 			</plugin>
 		</plugins>
