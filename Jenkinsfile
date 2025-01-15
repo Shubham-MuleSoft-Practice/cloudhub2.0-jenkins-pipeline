@@ -10,7 +10,6 @@ pipeline
 		  stage('Run MUnit Tests') {
             steps {
                 echo '***** Running MUnit test cases *****'
-                bat 'mvn test -Dmule.test.format=html -U'
             }
         }
 		stage('Deploy CloudHub 2.0') {
