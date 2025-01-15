@@ -20,5 +20,18 @@ output application/json
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
+		<flow-ref doc:name="Flow Reference" doc:id="ec356176-0990-4b7b-ace5-f8bf687cc9e2" name="cloudhub2.0-jenkins-pipelineFlow1"/>
+	</flow>
+	<flow name="cloudhub2.0-jenkins-pipelineFlow1" doc:id="1faf7c11-f366-4f9b-a354-204cd57ff15d" >
+		<ee:transform doc:name="Transform Message" doc:id="0213a551-280f-4347-8dda-dfd2e285145b" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	"message": "Run Munit test 1"
+}]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
 	</flow>
 </mule>
