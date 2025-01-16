@@ -6,7 +6,7 @@
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="53ceda30-5a67-4cba-8c93-a5182efe24d5" >
-		<http:listener-connection host="0.0.0.0" port="8081" />
+		<http:listener-connection host="0.0.0.0" port="8082" />
 	</http:listener-config>
 	<flow name="cloudhub2.0-jenkins-pipelineFlow" doc:id="abab690b-2f03-4b7c-83cc-e20365a9c67a" >
 		<http:listener doc:name="Listener" doc:id="94ec42dc-88ef-4ae4-9fcd-f64043e93e23" config-ref="HTTP_Listener_config" path="/test"/>

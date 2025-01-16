@@ -53,7 +53,7 @@
 				<version>${munit.version}</version>
 				<executions>
 					<execution>
-						<id>test</id>
+						<id>shubham-nexus</id>
 						<phase>test</phase>
 						<goals>
 							<goal>test</goal>
@@ -73,8 +73,8 @@
                               <format>html</format>
                           </formats>
                       </coverage>
-                      <serverId>mule-nexus-ee</serverId>
-                      <nexusUrl>https://repository.mulesoft.org/nexus-ee</nexusUrl>
+                      <serverId>shubham-nexus</serverId>
+                      <nexusUrl>http://localhost:8081/</nexusUrl>
                       <skipStaging>true</skipStaging>
 				</configuration>
 			</plugin>
@@ -83,9 +83,8 @@
 
 	<distributionManagement>
 		<repository>
-			<id>mule-nexus-ee</id>
-			<name>mule-nexus-ee</name>
-			<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+			<id>shubham-nexus</id>
+			<url>http://localhost:8081/repository/shubham-repository/</url>
 			<layout>default</layout>
 			<releases>
 				<enabled>true</enabled>
@@ -160,18 +159,6 @@
 			<layout>default</layout>
 		</repository>
 
-		<repository>
-			<id>mule-nexus-ee</id>
-			<name>mule-nexus-ee</name>
-			<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
-			<layout>default</layout>
-			<releases>
-				<enabled>true</enabled>
-			</releases>
-			<snapshots>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
 
 	</repositories>
 
