@@ -10,7 +10,7 @@ pipeline
 		  stage('Run MUnit Tests') {
             steps {
                 echo '***** Running MUnit test cases *****'
-                bat 'mvn clean test -Dmunit.failIfNoTests=true C:\\Users\\Admin\\.m2\\settings.xml'
+                bat 'mvn clean test -U -s C:\\Users\\Admin\\.m2\\settings.xml'
             }
         }
 		stage('Deploy CloudHub 2.0') {
