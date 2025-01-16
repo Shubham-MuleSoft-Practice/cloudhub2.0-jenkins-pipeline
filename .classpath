@@ -14,4 +14,7 @@
 	<classpathentry kind="src" output="target/test-classes" path="src/test/resources"/>
 	<classpathentry kind="src" path="src/test/munit"/>
 	<classpathentry kind="output" path="target/classes"/>
+	<classpathentry kind="lib" path="lib/log4j-api-2.20.0.jar"/>
+    <classpathentry kind="lib" path="lib/log4j-core-2.20.0.jar"/>
+
 </classpath>
