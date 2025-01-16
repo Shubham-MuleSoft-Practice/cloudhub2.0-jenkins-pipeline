@@ -10,7 +10,7 @@ pipeline
 		  stage('Run MUnit Tests') {
             steps {
                 echo '***** Running MUnit test cases *****'
-                bat 'mvn clean test -DskipVerification=true -s C:\\Users\\Admin\\.m2\\settings.xml'
+                bat 'mvn clean test  -Dmule.home=munitTest -DskipVerification=true -s C:\\Users\\Admin\\.m2\\settings.xml'
             }
         }
 		stage('Deploy CloudHub 2.0') {
