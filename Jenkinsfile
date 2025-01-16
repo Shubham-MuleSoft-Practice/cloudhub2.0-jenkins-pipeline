@@ -4,7 +4,7 @@ pipeline
 	stages{
 		stage('Build Application') {
 			steps {
-			   bat 'mvn clean deploy -U -Dmaven.test.skip=true -s C:\Users\Admin\.m2\settings.xml'
+			   bat 'mvn clean deploy -U -Dmaven.test.skip=true -s C:\\Users\\Admin\\.m2\\settings.xml'
 		   }
 	    }
 		  stage('Run MUnit Tests') {
