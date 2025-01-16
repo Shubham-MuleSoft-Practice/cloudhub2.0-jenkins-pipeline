@@ -52,27 +52,30 @@
 				<artifactId>munit-maven-plugin</artifactId>
 				<version>${munit.version}</version>
 				<executions>
-						<execution>
-							<id>munit-tests</id>
-							<phase>test</phase>
-							<goals>
-								<goal>test</goal>
-								<goal>coverage-report</goal>
-							</goals>
-							<configuration>
-								<coverage>
-									<runCoverage>true</runCoverage>
-									<failBuild>false</failBuild>
-									<requiredApplicationCoverage>0</requiredApplicationCoverage>
-									<requiredResourceCoverage>0</requiredResourceCoverage>
-									<requiredFlowCoverage>0</requiredFlowCoverage>
-									<formats>
-										<format>console</format>
-										<format>html</format>
-									</formats>
-								</coverage>
-							</configuration>
-						</execution>
+					<execution>
+						<id>munit-tests</id>
+						<phase>test</phase>
+						<goals>
+							<goal>test</goal>
+							<goal>coverage-report</goal>
+						</goals>
+						<configuration>
+							<systemPropertyVariables>
+								<mule.home>munitTest</mule.home>
+							</systemPropertyVariables>
+							<coverage>
+								<runCoverage>true</runCoverage>
+								<failBuild>false</failBuild>
+								<requiredApplicationCoverage>0</requiredApplicationCoverage>
+								<requiredResourceCoverage>0</requiredResourceCoverage>
+								<requiredFlowCoverage>0</requiredFlowCoverage>
+								<formats>
+									<format>console</format>
+									<format>html</format>
+								</formats>
+							</coverage>
+						</configuration>
+					</execution>
 				</executions>
 				<configuration>
 					<coverage>
