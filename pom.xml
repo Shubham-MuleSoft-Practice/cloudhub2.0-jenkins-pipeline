@@ -6,7 +6,7 @@
 
 	<groupId>a2f914c3-b279-42cb-bdbd-25d7c0cffb60</groupId>
 	<artifactId>cloudhub2.0-jenkins-pipeline</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<packaging>mule-application</packaging>
 
 	<name>cloudhub2.0-jenkins-pipeline</name>
@@ -65,7 +65,7 @@
 							</systemPropertyVariables>
 							<coverage>
 								<runCoverage>true</runCoverage>
-								<failBuild>false</failBuild>
+								<failBuild>true</failBuild>
 								<requiredApplicationCoverage>0</requiredApplicationCoverage>
 								<requiredResourceCoverage>0</requiredResourceCoverage>
 								<requiredFlowCoverage>0</requiredFlowCoverage>
@@ -77,19 +77,6 @@
 						</configuration>
 					</execution>
 				</executions>
-				<configuration>
-					<coverage>
-						<runCoverage>true</runCoverage>
-						<failBuild>false</failBuild>
-						<requiredApplicationCoverage>0</requiredApplicationCoverage>
-						<requiredResourceCoverage>0</requiredResourceCoverage>
-						<requiredFlowCoverage>0</requiredFlowCoverage>
-						<formats>
-							<format>console</format>
-							<format>html</format>
-						</formats>
-					</coverage>
-				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
