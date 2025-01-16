@@ -52,27 +52,40 @@
 				<artifactId>munit-maven-plugin</artifactId>
 				<version>${munit.version}</version>
 				<executions>
-					<execution>
-						<id>id</id>
-						<phase>test</phase>
-						<goals>
-							<goal>test</goal>
-							<goal>coverage-report</goal>
-						</goals>
-					</execution>
+						<execution>
+							<id>munit-tests</id>
+							<phase>test</phase>
+							<goals>
+								<goal>test</goal>
+								<goal>coverage-report</goal>
+							</goals>
+							<configuration>
+								<coverage>
+									<runCoverage>true</runCoverage>
+									<failBuild>false</failBuild>
+									<requiredApplicationCoverage>0</requiredApplicationCoverage>
+									<requiredResourceCoverage>0</requiredResourceCoverage>
+									<requiredFlowCoverage>0</requiredFlowCoverage>
+									<formats>
+										<format>console</format>
+										<format>html</format>
+									</formats>
+								</coverage>
+							</configuration>
+						</execution>
 				</executions>
 				<configuration>
-					 <coverage>
-                          <runCoverage>true</runCoverage>
-                          <failBuild>false</failBuild>
-                          <requiredApplicationCoverage>0</requiredApplicationCoverage>
-                          <requiredResourceCoverage>0</requiredResourceCoverage>
-                          <requiredFlowCoverage>0</requiredFlowCoverage>
-                          <formats>
-                              <format>console</format>
-                              <format>html</format>
-                          </formats>
-                      </coverage>
+					<coverage>
+						<runCoverage>true</runCoverage>
+						<failBuild>false</failBuild>
+						<requiredApplicationCoverage>0</requiredApplicationCoverage>
+						<requiredResourceCoverage>0</requiredResourceCoverage>
+						<requiredFlowCoverage>0</requiredFlowCoverage>
+						<formats>
+							<format>console</format>
+							<format>html</format>
+						</formats>
+					</coverage>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -80,18 +93,18 @@
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<version>1.5.1</version>
 				<executions>
-				  <execution>
-				     <id>default-deploy</id>
-				     <phase>deploy</phase>
-				     <goals>
-				       <goal>deploy</goal>
-				     </goals>
-				  </execution>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
 				</executions>
 				<configuration>
-				   <serverId>shubham-nexus</serverId>
-                      <nexusUrl>http://localhost:8081/</nexusUrl>
-                      <skipStaging>true</skipStaging>
+					<serverId>shubham-nexus</serverId>
+					<nexusUrl>http://localhost:8081/</nexusUrl>
+					<skipStaging>true</skipStaging>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -110,7 +123,7 @@
 			</snapshots>
 		</repository>
 		<snapshotRepository>
-		   <id>shubham-nexus</id>
+			<id>shubham-nexus</id>
 			<url>http://localhost:8081/repository/shubham-repository/</url>
 		</snapshotRepository>
 	</distributionManagement>
