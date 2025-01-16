@@ -6,7 +6,7 @@
 
 	<groupId>a2f914c3-b279-42cb-bdbd-25d7c0cffb60</groupId>
 	<artifactId>cloudhub2.0-jenkins-pipeline</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.1</version>
 	<packaging>mule-application</packaging>
 
 	<name>cloudhub2.0-jenkins-pipeline</name>
@@ -53,7 +53,7 @@
 				<version>${munit.version}</version>
 				<executions>
 					<execution>
-						<id>shubham-nexus</id>
+						<id>id</id>
 						<phase>test</phase>
 						<goals>
 							<goal>test</goal>
@@ -73,7 +73,23 @@
                               <format>html</format>
                           </formats>
                       </coverage>
-                      <serverId>shubham-nexus</serverId>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>1.5.1</version>
+				<executions>
+				  <execution>
+				     <id>default-deploy</id>
+				     <phase>deploy</phase>
+				     <goals>
+				       <goal>deploy</goal>
+				     </goals>
+				  </execution>
+				</executions>
+				<configuration>
+				   <serverId>shubham-nexus</serverId>
                       <nexusUrl>http://localhost:8081/</nexusUrl>
                       <skipStaging>true</skipStaging>
 				</configuration>
@@ -93,6 +109,10 @@
 				<enabled>true</enabled>
 			</snapshots>
 		</repository>
+		<snapshotRepository>
+		   <id>shubham-nexus</id>
+			<url>http://localhost:8081/repository/shubham-repository/</url>
+		</snapshotRepository>
 	</distributionManagement>
 
 	<dependencies>
