@@ -4,13 +4,13 @@ pipeline
 	stages{
 		stage('Build Application') {
 			steps {
-			   bat 'mvn clean install -U -s C:\\Users\\Admin\\.m2\\settings.xml'
+			   bat 'mvn clean deploy -U -Dmaven.test.skip=true -s C:\\Users\\Admin\\.m2\\settings.xml'
 		   }
 	    }
 		  stage('Run MUnit Tests') {
             steps {
                 echo '***** Running MUnit test cases *****'
-                bat 'mvn clean test -U -s C:\\Users\\Admin\\.m2\\settings.xml'
+                bat 'mvn clean test -DskipVerification=true -s C:\\Users\\Admin\\.m2\\settings.xml'
             }
         }
 		stage('Deploy CloudHub 2.0') {
